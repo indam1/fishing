@@ -1,0 +1,73 @@
+# Свойства для блипа обычной рыбалки
+FishingNormalBlipMarker: &FishingNormalBlipMarker
+  blip:
+    type: 147
+    color: 5
+    options:
+      shortRange: true
+  title: fishing.blips.normal
+  disableLabel: true
+  color: false
+
+# Свойства для блипа в зонах нереста
+FishingHardBlipMarker: &FishingHardBlipMarker
+  blip:
+    type: 147
+    color: 59
+    options:
+      shortRange: true
+      drawDistance: 120
+  title: fishing.blips.hard
+
+# Свойства для обычной рыбалки
+BaseFishingGameNormal:
+  FishingGame:
+    forbidFactionIds: ['police', 'army', 'fsbu', 'regular_army']
+    experienceGO: FishingExperience
+  FishingCastGame:
+    baseMaxSpeed: 0.6
+    baseMinSpeed: 0.4
+    baseMaxTime: 150
+    baseMinTime: 110
+    superGreenZone: 0.05
+    greenZone: 0.1
+    winZone: 0.75
+    failAnimationTime: 5
+    successAnimationTime: 5
+    statuses:
+      - statusId: 'superGreenZone'
+        zone: 0.05
+        isWin: true
+        color: '#02B808'
+      - statusId: 'cool'
+        zone: 0.1
+        isWin: true
+        color: '#91FD03'
+      - statusId: 'greenZone'
+        zone: 0.5
+        isWin: true
+        color: '#C3FD03'
+      - statusId: 'bad'
+        zone: 0.75
+        isWin: true
+        color: '#FD9103'
+      - statusId: 'fail'
+        zone: 1
+        isWin: false
+        color: '#FF0101'
+  FishingPullGame:
+    startPath: 'fishing/pull-start.mp3'
+    startSoundVolume: 0.9
+    baseValue: 15
+    baseSpeed: 0.05
+    baseConstraint: 8
+    topEdge: 25
+    bottomEdge: 75
+    failAnimationTime: 5
+    successAnimationTime: 5
+    gameTime: 30
+  #    Zone:
+  #        model: 'zone_m'
+  #        radius: 10
+  Marker:
+    <<: *FishingNormalBlipMarker

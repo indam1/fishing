@@ -1,0 +1,37 @@
+FishingPointBMX1:
+    Extends: BaseFishingGameNormal
+    FishingGame:
+        distance: 5
+        height: 3
+        depth: 20
+    Marker:
+        position: [1437.51, 4565.25, 138.24]
+    Zone:
+        position: [1437.51, 4565.25, 138.24]
+        polygon: [[1438.34, 4571.69], [1438.39, 4558.38], [1425.25, 4558.32], [1425.43, 4560.55], [1436.10, 4560.45], [1436.30, 4569.63], [1425.15, 4569.87], [1425.05, 4571.63]]
+        height:
+             min: 136
+             max: 150
+
+FishingAreaSpawn:
+    Extends: BaseFishingGameHard
+    RandomZone:
+        updateZoneTime: 1200
+    Zone@1:
+        position: [1249.53, 539.81, 127.98]
+        polygon: [[1277.30, 561.94], [1278.00, 492.71], [1219.92, 487.86], [1221.07, 561.88]]
+        height:
+            min: 128
+            max: 135
+    Zone@2:
+        model: 'zone_m'
+        position: [1737.81, 561.68, 127.86]
+        radius: 80
+    Zone@3:
+        model: 'zone_m'
+        position: [1622.02, 4106.29, 129.31]
+        radius: 80
+    Zone@4:
+        model: 'zone_m'
+        position: [1655.01, 3369.68, 128.56]
+        radius: 80
